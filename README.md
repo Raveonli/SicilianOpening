@@ -1,5 +1,14 @@
 # SicilianOpening
-Contexte : d'où viennent les données, qui les a créées et dans quel contexte
-Description Comment sont structurées les données ? Parler du format, des attributs et du type de données
-But: qu'est-ce que vous voulez découvrir ? Des tendances ? Vous voulez explorer ou expliquer?
-Références: Qui d'autre dans le web ou dans la recherche a utilisé ces données ? Dans quel but ?
+
+Contexte : 
+Les données proviennent de lichess.org qui possède une base de données de toutes les ouvertures d'échecs. Le projet se focalise sur la défense sicilienne(B90 Sicilian Defense: Najdorf Variation, English Attack). Le nom de l'ouverture vient du grand maître international polono-argentin, Miguel Najdorf, l'un de ses premiers promoteurs.
+https://lichess.org/opening/Sicilian_Defense_Najdorf_Variation_English_Attack
+
+Description:
+Les données sont sous forment de coordonnées qui situent les pièces sur l'échiquier grâce à un système de chiffre (1-8) et lettre de (a-h). Chaque coups à donc une notation comme par exemple FB7 qui va déplacer le fou sur la case b7. Ce sont donc des données au format texte qui seront visibles sur l'échiquier en déplaçant les pièces "live".
+
+But: 
+Le but du projet est d'expliquer mon ouverture favorite, avec les raisons de pourquoi tel coup est joué lorsque la partie avance ainsi que des tactiques et stratégies positionnelles.
+
+Références: 
+La plupart des joueurs d'échecs qui étudie uen ouverture ont accès à ces données et peuvent les parcourir sur pleins de sites web comme chess.com, lichees.org, chess24.com. Ces données sont donc utilisées pour apprendre la théorie et les ouvertures des échecs.
