@@ -5,10 +5,10 @@ Les données proviennent de lichess.org qui possède une base de données de tou
 https://lichess.org/opening/Sicilian_Defense_Najdorf_Variation_English_Attack
 
 Description:
-Les données sont sous forment de coordonnées qui situent les pièces sur l'échiquier grâce à un système de chiffre (1-8) et lettre de (a-h). Chaque coups à donc une notation comme par exemple FB7 qui va déplacer le fou sur la case b7. Ce sont donc des données au format texte qui seront visibles sur l'échiquier en déplaçant les pièces "live".
+Les données sont sous forment de coordonnées qui situent les pièces sur l'échiquier grâce à un système de chiffre (1-8) et lettre de (a-h). Chaque coups à donc une notation comme par exemple FB7 qui va déplacer le fou sur la case b7. Ce sont donc des données au format texte qui seront visibles sur l'échiquier en déplaçant les pièces "live". Chaque coup décisif sera accompagné d'un commentaire le concernant pour rendre l'expéreince vivante.
 
 But: 
 Le but du projet est d'expliquer mon ouverture favorite, avec les raisons de pourquoi tel coup est joué lorsque la partie avance ainsi que des tactiques et stratégies positionnelles.
 
 Références: 
-La plupart des joueurs d'échecs qui étudie uen ouverture ont accès à ces données et peuvent les parcourir sur pleins de sites web comme chess.com, lichees.org, chess24.com. Ces données sont donc utilisées pour apprendre la théorie et les ouvertures des échecs.
+La plupart des joueurs d'échecs qui étudie uen ouverture ont accès à ces données et peuvent les parcourir sur pleins de sites web comme chess.com, lichees.org, chess24.com. Ces données sont donc utilisées pour apprendre la théorie et les ouvertures des échecs ainsi que pour analyser des parties de grands maîtres.
