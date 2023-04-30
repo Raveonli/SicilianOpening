@@ -1,0 +1,20 @@
+#board {
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+}
+
+#moves {
+  display: block;
+  top: 18%;
+  position: absolute;
+  margin: auto;
+  left: 70%;
+}
+#comments {
+  display: block;
+  top: 18%;
+  position: absolute;
+  margin: auto;
+  right: 70%;
+}
