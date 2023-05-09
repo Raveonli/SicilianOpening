@@ -1,6 +1,7 @@
 import { select, selectAll } from "d3-selection";
-const board = select("#board").append("g");
 
+const board = select("#board").append("g");
+const fontMove = "Segoe UI";
 const positionG = 386;
 const positionH = 450;
 // Créer l'échiquier avec des rectangles alternativement remplis de steelblue et white
@@ -15,7 +16,7 @@ for (let i = 0; i < 8; i++) {
       .attr("fill", (i + j) % 2 === 0 ? "white" : "steelblue");
   }
 }
-// ajout d'une tour de l'échiquier
+// ajout d'un bord de l'échiquier
 board
   .append("rect")
   .attr("x", 0)
@@ -25,11 +26,12 @@ board
   .attr("stroke", "black")
   .attr("stroke-width", 5)
   .attr("fill", "none");
+
 //ajout des pièces
 board
   .append("image")
   .attr("id", "whiteKing")
-  .attr("href", "src/img/whiteKing.svg")
+  .attr("href", "./img/whiteKing.svg")
   .attr("width", 60)
   .attr("x", 258)
   .attr("y", 450);
@@ -37,7 +39,7 @@ board
 board
   .append("image")
   .attr("id", "whiteQueen")
-  .attr("href", "src/img/whiteQueen.svg")
+  .attr("href", "./img/whiteQueen.svg")
   .attr("width", 59)
   .attr("x", 195)
   .attr("y", 451);
@@ -47,7 +49,7 @@ board.append("image").attr("id", "firstmove");
 board
   .append("image")
   .attr("id", "whiteRookL")
-  .attr("href", "src/img/whiteRook.svg")
+  .attr("href", "./img/whiteRook.svg")
   .attr("width", 59)
   .attr("x", 3)
   .attr("y", 451);
@@ -55,7 +57,7 @@ board
 board
   .append("image")
   .attr("id", "whiteRookR")
-  .attr("href", "src/img/whiteRook.svg")
+  .attr("href", "./img/whiteRook.svg")
   .attr("width", 59)
   .attr("x", 450)
   .attr("y", 451);
@@ -63,14 +65,14 @@ board
 board
   .append("image")
   .attr("id", "whiteBishopR")
-  .attr("href", "src/img/whiteBishop.svg")
+  .attr("href", "./img/whiteBishop.svg")
   .attr("width", 59)
   .attr("x", 323)
   .attr("y", 451);
 board
   .append("image")
   .attr("id", "whiteBishopL")
-  .attr("href", "src/img/whiteBishop.svg")
+  .attr("href", "./img/whiteBishop.svg")
   .attr("width", 59)
   .attr("x", 130)
   .attr("y", 451);
@@ -78,7 +80,7 @@ board
 board
   .append("image")
   .attr("id", "whiteKnightR")
-  .attr("href", "src/img/whiteKnight.svg")
+  .attr("href", "./img/whiteKnight.svg")
   .attr("width", 59)
   .attr("x", 385)
   .attr("y", 451);
@@ -86,7 +88,7 @@ board
 board
   .append("image")
   .attr("id", "whiteKnightL")
-  .attr("href", "src/img/whiteKnight.svg")
+  .attr("href", "./img/whiteKnight.svg")
   .attr("width", 59)
   .attr("x", 65)
   .attr("y", 451);
@@ -94,7 +96,7 @@ board
 board
   .append("image")
   .attr("id", "whitePawnA")
-  .attr("href", "src/img/whitePawn.svg")
+  .attr("href", "./img/whitePawn.svg")
   .attr("width", 59)
   .attr("x", 4)
   .attr("y", 385);
@@ -102,7 +104,7 @@ board
 board
   .append("image")
   .attr("id", "whitePawnB")
-  .attr("href", "src/img/whitePawn.svg")
+  .attr("href", "./img/whitePawn.svg")
   .attr("width", 59)
   .attr("x", 66)
   .attr("y", 385);
@@ -110,7 +112,7 @@ board
 board
   .append("image")
   .attr("id", "whitePawnC")
-  .attr("href", "src/img/whitePawn.svg")
+  .attr("href", "./img/whitePawn.svg")
   .attr("width", 59)
   .attr("x", 131)
   .attr("y", 385);
@@ -118,15 +120,7 @@ board
 board
   .append("image")
   .attr("id", "whitePawnD")
-  .attr("href", "src/img/whitePawn.svg")
-  .attr("width", 59)
-  .attr("x", 195)
-  .attr("y", 385);
-
-board
-  .append("image")
-  .attr("id", "whitePawnD")
-  .attr("href", "src/img/whitePawn.svg")
+  .attr("href", "./img/whitePawn.svg")
   .attr("width", 59)
   .attr("x", 195)
   .attr("y", 385);
@@ -134,7 +128,7 @@ board
 board
   .append("image")
   .attr("id", "whitePawnE")
-  .attr("href", "src/img/whitePawn.svg")
+  .attr("href", "./img/whitePawn.svg")
   .attr("width", 59)
   .attr("x", 258)
   .attr("y", 385);
@@ -142,21 +136,21 @@ board
 board
   .append("image")
   .attr("id", "whitePawnF")
-  .attr("href", "src/img/whitePawn.svg")
+  .attr("href", "./img/whitePawn.svg")
   .attr("width", 59)
   .attr("x", 323)
   .attr("y", 385);
 board
   .append("image")
   .attr("id", "whitePawnG")
-  .attr("href", "src/img/whitePawn.svg")
+  .attr("href", "./img/whitePawn.svg")
   .attr("width", 59)
   .attr("x", positionG)
   .attr("y", 385);
 board
   .append("image")
-  .attr("id", "whitePawnG")
-  .attr("href", "src/img/whitePawn.svg")
+  .attr("id", "whitePawnH")
+  .attr("href", "./img/whitePawn.svg")
   .attr("width", 59)
   .attr("x", positionH)
   .attr("y", 385);
@@ -164,8 +158,8 @@ board
 // black Pieces
 board
   .append("image")
-  .attr("id", "balckKing")
-  .attr("href", "src/img/blackKing.svg")
+  .attr("id", "blackKing")
+  .attr("href", "./img/blackKing.svg")
   .attr("width", 60)
   .attr("x", 258)
   .attr("y", 2);
@@ -173,7 +167,7 @@ board
 board
   .append("image")
   .attr("id", "blackQueen")
-  .attr("href", "src/img/blackQueen.svg")
+  .attr("href", "./img/blackQueen.svg")
   .attr("width", 59)
   .attr("x", 195)
   .attr("y", 2);
@@ -181,7 +175,7 @@ board
 board
   .append("image")
   .attr("id", "blackRookL")
-  .attr("href", "src/img/blackRook.svg")
+  .attr("href", "./img/blackRook.svg")
   .attr("width", 59)
   .attr("x", 3)
   .attr("y", 2);
@@ -189,7 +183,7 @@ board
 board
   .append("image")
   .attr("id", "blackRookR")
-  .attr("href", "src/img/blackRook.svg")
+  .attr("href", "./img/blackRook.svg")
   .attr("width", 59)
   .attr("x", 450)
   .attr("y", 2);
@@ -197,14 +191,14 @@ board
 board
   .append("image")
   .attr("id", "blackBishopR")
-  .attr("href", "src/img/blackBishop.svg")
+  .attr("href", "./img/blackBishop.svg")
   .attr("width", 59)
   .attr("x", 323)
   .attr("y", 2);
 board
   .append("image")
   .attr("id", "blackBishopL")
-  .attr("href", "src/img/blackBishop.svg")
+  .attr("href", "./img/blackBishop.svg")
   .attr("width", 59)
   .attr("x", 130)
   .attr("y", 2);
@@ -212,7 +206,7 @@ board
 board
   .append("image")
   .attr("id", "blackKnightR")
-  .attr("href", "src/img/blackKnight.svg")
+  .attr("href", "./img/blackKnight.svg")
   .attr("width", 59)
   .attr("x", 385)
   .attr("y", 2);
@@ -220,7 +214,7 @@ board
 board
   .append("image")
   .attr("id", "blackKnightL")
-  .attr("href", "src/img/blackKnight.svg")
+  .attr("href", "./img/blackKnight.svg")
   .attr("width", 59)
   .attr("x", 65)
   .attr("y", 2);
@@ -228,7 +222,7 @@ board
 board
   .append("image")
   .attr("id", "blackPawnA")
-  .attr("href", "src/img/blackPawn.svg")
+  .attr("href", "./img/blackPawn.svg")
   .attr("width", 59)
   .attr("x", 4)
   .attr("y", 65);
@@ -236,7 +230,7 @@ board
 board
   .append("image")
   .attr("id", "blackPawnB")
-  .attr("href", "src/img/blackPawn.svg")
+  .attr("href", "./img/blackPawn.svg")
   .attr("width", 59)
   .attr("x", 66)
   .attr("y", 65);
@@ -244,7 +238,7 @@ board
 board
   .append("image")
   .attr("id", "blackPawnC")
-  .attr("href", "src/img/blackPawn.svg")
+  .attr("href", "./img/blackPawn.svg")
   .attr("width", 59)
   .attr("x", 131)
   .attr("y", 65);
@@ -252,15 +246,7 @@ board
 board
   .append("image")
   .attr("id", "blackPawnD")
-  .attr("href", "src/img/blackPawn.svg")
-  .attr("width", 59)
-  .attr("x", 195)
-  .attr("y", 65);
-
-board
-  .append("image")
-  .attr("id", "blackPawnD")
-  .attr("href", "src/img/blackPawn.svg")
+  .attr("href", "./img/blackPawn.svg")
   .attr("width", 59)
   .attr("x", 195)
   .attr("y", 65);
@@ -268,7 +254,7 @@ board
 board
   .append("image")
   .attr("id", "blackPawnE")
-  .attr("href", "src/img/blackPawn.svg")
+  .attr("href", "./img/blackPawn.svg")
   .attr("width", 59)
   .attr("x", 258)
   .attr("y", 65);
@@ -276,25 +262,152 @@ board
 board
   .append("image")
   .attr("id", "blackPawnF")
-  .attr("href", "src/img/blackPawn.svg")
+  .attr("href", "./img/blackPawn.svg")
   .attr("width", 59)
   .attr("x", 323)
   .attr("y", 65);
 board
   .append("image")
   .attr("id", "blackPawnG")
-  .attr("href", "src/img/blackPawn.svg")
+  .attr("href", "./img/blackPawn.svg")
   .attr("width", 59)
   .attr("x", positionG)
   .attr("y", 65);
 board
   .append("image")
   .attr("id", "blackPawnG")
-  .attr("href", "src/img/blackPawn.svg")
+  .attr("href", "./img/blackPawn.svg")
   .attr("width", 59)
   .attr("x", positionH)
   .attr("y", 65);
-
+board
+  .append("text")
+  .text("A")
+  .attr("x", 55)
+  .attr("y", 507)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("B")
+  .attr("x", 119)
+  .attr("y", 507)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("C")
+  .attr("x", 183)
+  .attr("y", 507)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("D")
+  .attr("x", 246)
+  .attr("y", 507)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("E")
+  .attr("x", 309)
+  .attr("y", 507)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("F")
+  .attr("x", 375)
+  .attr("y", 507)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("G")
+  .attr("x", 437)
+  .attr("y", 507)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("H")
+  .attr("x", 501)
+  .attr("y", 507)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("8")
+  .attr("x", 4)
+  .attr("y", 12)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("7")
+  .attr("x", 4)
+  .attr("y", 76)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("6")
+  .attr("x", 4)
+  .attr("y", 140)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("5")
+  .attr("x", 4)
+  .attr("y", 204)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("4")
+  .attr("x", 4)
+  .attr("y", 268)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("3")
+  .attr("x", 4)
+  .attr("y", 332)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("2")
+  .attr("x", 4)
+  .attr("y", 396)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
+board
+  .append("text")
+  .text("1")
+  .attr("x", 4)
+  .attr("y", 460)
+  .attr("font-size", "9px")
+  .attr("font-family", fontMove)
+  .attr("font-weight", "bold");
 const width = 52;
 const height = 32;
 
@@ -347,6 +460,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -357,6 +471,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -367,6 +482,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 
 moves
@@ -378,6 +494,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -388,6 +505,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -398,6 +516,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 
 moves
@@ -409,6 +528,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -419,6 +539,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -429,6 +550,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -439,6 +561,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -449,6 +572,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -459,6 +583,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -469,6 +594,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -479,6 +605,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -489,6 +616,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -499,6 +627,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -509,6 +638,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -519,6 +649,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -528,8 +659,10 @@ moves
   .attr("y", height * 9.95)
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
-  .attr("font-size", "20px")
-  .attr("fill", "black");
+  .attr("font-size", "19px")
+  .attr("font-family", fontMove)
+  .attr("fill", "black")
+  .attr("letter-spacing", "-1px");
 moves
   .append("text")
   .text("Cbd7")
@@ -538,7 +671,8 @@ moves
   .attr("y", height * 9.95)
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
-  .attr("font-size", "20px")
+  .attr("font-size", "19px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -549,6 +683,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -559,6 +694,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -569,6 +705,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -579,6 +716,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -589,6 +727,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -599,6 +738,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -609,6 +749,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -619,6 +760,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -629,6 +771,7 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
 moves
   .append("text")
@@ -639,39 +782,44 @@ moves
   .attr("text-anchor", "middle")
   .attr("dominant-baseline", "central")
   .attr("font-size", "20px")
+  .attr("font-family", fontMove)
   .attr("fill", "black");
+
 // comments
 //
 //
 const comments = select("#comments").append("g");
-
+const textColor = "white";
 comments
   .append("text")
-  .text("Bonjour et bienvenue pour  ")
+  .text("Bienvenue dans l’ouverture  ")
   .attr("id", "ligne1")
   .attr("x", 15)
   .attr("y", 20)
-  .attr("font-family", "Roboto")
+  .attr("font-family", "Segoe UI")
   .attr("font-size", "14px")
-  .attr("fill", "white");
+  .attr("font-weight", "bold")
+  .attr("fill", textColor);
 comments
   .append("text")
-  .text("une ouverture de folie !")
+  .text("sicilienne, veuillez faire !")
   .attr("id", "ligne2")
   .attr("x", 15)
   .attr("y", 40)
-  .attr("font-family", "Roboto")
+  .attr("font-family", "Segoe UI")
   .attr("font-size", "14px")
-  .attr("fill", "white");
+  .attr("font-weight", "bold")
+  .attr("fill", textColor);
 comments
   .append("text")
-  .text("")
+  .text("défiler pour voir la suite.")
   .attr("id", "ligne3")
   .attr("x", 15)
   .attr("y", 60)
-  .attr("font-family", "Roboto")
+  .attr("font-family", "Segoe UI")
   .attr("font-size", "14px")
-  .attr("fill", "white");
+  .attr("font-weight", "bold")
+  .attr("fill", textColor);
 ///////////////////
 ///////////////////////////////////
 //code animation
@@ -686,44 +834,66 @@ const changeTexte = (text) => {
   ligne3.text(text[2]);
 };
 const changeFont = (nom) => {
-  console.log(nom);
+  //console.log(nom);
   select("#" + nom)
     .attr("font-weight", "bold")
     .style("text-decoration", "underline");
 };
 const boardExplanation = (idExplanation) => {
-  let explanation = "#" + idExplanation;
-  let lastChar = explanation.slice(-1);
-  let newNumber = parseInt(lastChar) - 1;
-  let lastExplanation = "#explanation" + newNumber;
-  //console.log(lastExplanation);
-  select(lastExplanation).style("display", "none");
-
-  select("#" + idExplanation).style("display", "block");
+  if (idExplanation.length == 12) {
+    let explanation = "#" + idExplanation;
+    let lastChar = explanation.slice(-1);
+    let newNumber = parseInt(lastChar) - 1;
+    let lastExplanation = "#explanation" + newNumber;
+    //console.log(lastExplanation);
+    select(lastExplanation).style("display", "none");
+    select("#" + idExplanation).style("display", "block");
+  } else {
+    let explanation = "#" + idExplanation;
+    let lastChar = explanation.slice(-2);
+    let newNumber = parseInt(lastChar) - 1;
+    let lastExplanation = "#explanation" + newNumber;
+    //console.log(lastExplanation);
+    select(lastExplanation).style("display", "none");
+    select("#" + idExplanation).style("display", "block");
+  }
 };
 
 const boardExplanationback = (idExplanation) => {
-  let explanation = "#" + idExplanation;
-  let lastChar = explanation.slice(-1);
-  let newNumber = parseInt(lastChar) - 1;
-  let lastExplanation = "#explanation" + newNumber;
-  //console.log(lastExplanation);
-  select(lastExplanation).style("display", "block");
-
-  select("#" + idExplanation).style("display", "none");
+  if (idExplanation.length == 12) {
+    let explanation = "#" + idExplanation;
+    let lastChar = explanation.slice(-1);
+    let newNumber = parseInt(lastChar) - 1;
+    let lastExplanation = "#explanation" + newNumber;
+    select(lastExplanation).style("display", "block");
+    select("#" + idExplanation).style("display", "none");
+    //console.log(lastExplanation);
+  } else {
+    let explanation = "#" + idExplanation;
+    let lastChar = explanation.slice(-2);
+    let newNumber = parseInt(lastChar) - 1;
+    let lastExplanation = "#explanation" + newNumber;
+    select(lastExplanation).style("display", "block");
+    select("#" + idExplanation).style("display", "none");
+    //console.log(lastExplanation);
+  }
 };
-const move = (nom, x, y, pieceId, text, idExplanation) => {
+const move = (nom, x, y, pieceId, text, idExplanation, hide) => {
   let pieceSelected = select("#" + pieceId);
   let currentPositionX = parseFloat(pieceSelected.attr("x"));
   let currentPositionY = parseFloat(pieceSelected.attr("y"));
   //console.log(currentPositionX, currentPositionY);
   pieceSelected.attr("x", currentPositionX + x).attr("y", currentPositionY + y);
+
   changeTexte(text);
   changeFont(nom);
   boardExplanation(idExplanation);
+  if (hide) {
+    select("#" + hide).style("display", "none");
+  }
 };
 
-const moveback = (nom, x, y, pieceId, text, idExplanation) => {
+const moveback = (nom, x, y, pieceId, text, idExplanation, hide) => {
   let pieceSelected = select("#" + pieceId);
   let currentPositionX = parseFloat(pieceSelected.attr("x"));
   let currentPositionY = parseFloat(pieceSelected.attr("y"));
@@ -732,6 +902,9 @@ const moveback = (nom, x, y, pieceId, text, idExplanation) => {
   changeTexte(text);
   changeFont(nom);
   boardExplanationback(idExplanation);
+  if (hide) {
+    select("#" + hide).style("display", "block");
+  }
 };
 
 const removeUnderline = (nom) => {
@@ -772,49 +945,201 @@ board
   .attr("stroke-width", 3)
   .style("display", "none");
 
+board
+  .append("rect")
+  .attr("id", "explanation12")
+  .attr("x", 64 * 3)
+  .attr("y", 64 * 4)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation23")
+  .attr("x", 64 * 5)
+  .attr("y", 64 * 2)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
 //move("e4", 0, -129, "whitePawnE", texte, "explanation1");
 // move("c5", 0, 129, "blackPawnC", texte1, "explanation2");
-
+function getIndexByTextId(textId, data) {
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].nom === textId) {
+      return i;
+    }
+  }
+  return -1; // si aucun objet correspondant n'est trouvé
+}
+let indexmax = 0;
 // Charger les données JSON
-fetch("src/data.json")
+fetch("./data.json")
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
-    let index = 0;
+    let texts = document.querySelectorAll("text");
+    texts.forEach(function (text) {
+      text.addEventListener("click", function () {
+        let id = this.id; // Récupère l'ID de l'élément cliqué
+        let index = indexmax + 1;
+        let valeurDepart = indexmax;
+        console.log(index);
+        indexmax = getIndexByTextId(id, data);
+        console.log("L'élément avec l'ID " + indexmax + " a été cliqué !");
+
+        if (indexmax < valeurDepart) {
+          index--;
+          for (index; index > indexmax; index--) {
+            removefont(data[index].nom);
+            console.log(index);
+            console.log(indexmax);
+            //castle black coup spécial
+            if (index == 18) {
+              let pieceSelected = select("#blackRookR");
+              let currentPositionX = parseFloat(pieceSelected.attr("x"));
+              let currentPositionY = parseFloat(pieceSelected.attr("y"));
+              //console.log(currentPositionX, currentPositionY);
+              pieceSelected
+                .attr("x", currentPositionX + 128)
+                .attr("y", currentPositionY + 0);
+            }
+            if (index == 19) {
+              let pieceSelected = select("#whiteRookL");
+              let currentPositionX = parseFloat(pieceSelected.attr("x"));
+              let currentPositionY = parseFloat(pieceSelected.attr("y"));
+              //console.log(currentPositionX, currentPositionY);
+              pieceSelected
+                .attr("x", currentPositionX - 192)
+                .attr("y", currentPositionY + 0);
+            }
+            moveback(
+              data[index - 1].nom,
+              data[index].x,
+              data[index].y,
+              data[index].pieceId,
+              data[index - 1].texte,
+              data[index].idExplanation,
+              data[index].hide
+            );
+          }
+        } else if (valeurDepart == index) {
+          console.log("on est égalité");
+        } else {
+          for (index; index <= indexmax; index++) {
+            if (index == 0) {
+              index = index + 1;
+            }
+            removeUnderline(data[index - 1].nom);
+
+            if (index == 18) {
+              let pieceSelected = select("#blackRookR");
+              let currentPositionX = parseFloat(pieceSelected.attr("x"));
+              let currentPositionY = parseFloat(pieceSelected.attr("y"));
+              //console.log(currentPositionX, currentPositionY);
+              pieceSelected
+                .attr("x", currentPositionX - 128)
+                .attr("y", currentPositionY + 0);
+            }
+            if (index == 19) {
+              let pieceSelected = select("#whiteRookL");
+              let currentPositionX = parseFloat(pieceSelected.attr("x"));
+              let currentPositionY = parseFloat(pieceSelected.attr("y"));
+              //console.log(currentPositionX, currentPositionY);
+              pieceSelected
+                .attr("x", currentPositionX + 192)
+                .attr("y", currentPositionY + 0);
+            }
+            move(
+              data[index].nom,
+              data[index].x,
+              data[index].y,
+              data[index].pieceId,
+              data[index].texte,
+              data[index].idExplanation,
+              data[index].hide
+            );
+          }
+        }
+      });
+    });
+
     window.addEventListener("wheel", (e) => {
       //vers le haut
-      if (index > data.length - 1) {
-        index = data.length - 1;
+      if (indexmax > data.length - 1) {
+        indexmax = data.length - 1;
       }
-      if (index <= -1) {
-        index = 0;
+      if (indexmax <= -1) {
+        indexmax = 0;
       }
       if (e.deltaY < 0) {
-        index = index;
-        console.log(index);
-        removefont(data[index].nom);
+        removefont(data[indexmax].nom);
+        //castle black coup spécial
+        if (indexmax == 18) {
+          let pieceSelected = select("#blackRookR");
+          let currentPositionX = parseFloat(pieceSelected.attr("x"));
+          let currentPositionY = parseFloat(pieceSelected.attr("y"));
+          //console.log(currentPositionX, currentPositionY);
+          pieceSelected
+            .attr("x", currentPositionX + 128)
+            .attr("y", currentPositionY + 0);
+        }
+        if (indexmax == 19) {
+          let pieceSelected = select("#whiteRookL");
+          let currentPositionX = parseFloat(pieceSelected.attr("x"));
+          let currentPositionY = parseFloat(pieceSelected.attr("y"));
+          //console.log(currentPositionX, currentPositionY);
+          pieceSelected
+            .attr("x", currentPositionX - 192)
+            .attr("y", currentPositionY + 0);
+        }
         moveback(
-          data[index - 1].nom,
-          data[index].x,
-          data[index].y,
-          data[index].pieceId,
-          data[index - 1].texte,
-          data[index].idExplanation
+          data[indexmax - 1].nom,
+          data[indexmax].x,
+          data[indexmax].y,
+          data[indexmax].pieceId,
+          data[indexmax - 1].texte,
+          data[indexmax].idExplanation,
+          data[indexmax].hide
         );
-        index = index - 1;
+        indexmax = indexmax - 1;
       }
       //vers le bas
       else if (e.deltaY > 0) {
-        removeUnderline(data[index].nom);
-        index = index + 1;
-        console.log(index);
+        removeUnderline(data[indexmax].nom);
+        indexmax = indexmax + 1;
+        console.log(indexmax);
+
+        if (indexmax == 18) {
+          let pieceSelected = select("#blackRookR");
+          let currentPositionX = parseFloat(pieceSelected.attr("x"));
+          let currentPositionY = parseFloat(pieceSelected.attr("y"));
+          //console.log(currentPositionX, currentPositionY);
+          pieceSelected
+            .attr("x", currentPositionX - 128)
+            .attr("y", currentPositionY + 0);
+        }
+        if (indexmax == 19) {
+          let pieceSelected = select("#whiteRookL");
+          let currentPositionX = parseFloat(pieceSelected.attr("x"));
+          let currentPositionY = parseFloat(pieceSelected.attr("y"));
+          //console.log(currentPositionX, currentPositionY);
+          pieceSelected
+            .attr("x", currentPositionX + 192)
+            .attr("y", currentPositionY + 0);
+        }
         move(
-          data[index].nom,
-          data[index].x,
-          data[index].y,
-          data[index].pieceId,
-          data[index].texte,
-          data[index].idExplanation
+          data[indexmax].nom,
+          data[indexmax].x,
+          data[indexmax].y,
+          data[indexmax].pieceId,
+          data[indexmax].texte,
+          data[indexmax].idExplanation,
+          data[indexmax].hide
         );
 
         console.log("La molette va vers le bas");
@@ -822,3 +1147,15 @@ fetch("src/data.json")
     });
   })
   .catch((error) => console.error(error));
+// Définir la taille de chaque carré
+const squareSize = 10;
+
+// Définir une palette de couleurs
+const colorPalette = [
+  "#ff00ff",
+  "#00ffff",
+  "#ffff00",
+  "#00ff00",
+  "#ff0000",
+  "#0000ff",
+];

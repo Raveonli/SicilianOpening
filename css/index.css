@@ -1,0 +1,32 @@
+#board {
+  display: block;
+  top: 18%;
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#moves {
+  display: block;
+  top: 18%;
+  position: absolute;
+  margin: auto;
+  left: 70%;
+}
+#comments {
+  display: block;
+  top: 18%;
+  position: absolute;
+  margin: auto;
+  right: 70%;
+}
+/* make h1 centered and Roboto family */
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 3em;
+}
+#moves g text:hover {
+  cursor: pointer;
+}
