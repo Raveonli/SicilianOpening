@@ -6,7 +6,7 @@
     "texte": [
       "Bienvenue dans l’ouverture ",
       "sicilienne, veuillez faire ",
-      "défiler pour voir la suite."
+      "défiler pour voir la suite!"
     ],
     "pieceId": "firstmove",
     "idExplanation": "explanation0"
@@ -28,9 +28,9 @@
     "x": 0,
     "y": 129,
     "texte": [
-      "Premier coup des noirs ",
-      "Ils prennent contrôle de la ",
-      "case e5."
+      "Premier coup des noirs, ils ",
+      "prennent contrôle de la case ",
+      "e5."
     ],
     "pieceId": "blackPawnC",
     "idExplanation": "explanation2"
@@ -39,41 +39,41 @@
     "nom": "Cf3",
     "x": -63,
     "y": -129,
-    "texte": ["Les blancs se développent ", "en sortant leur cavalier "],
+    "texte": [
+      "Les blancs se développent ",
+      "en sortant leur cavalier et ",
+      "préparent leur prochain coup d4."
+    ],
     "pieceId": "whiteKnightR",
-    "idExplanation": "explanation03"
+    "idExplanation": "explanation3"
   },
   {
     "nom": "d6",
     "x": 0,
     "y": 65.5,
     "texte": [
-      "Coup plutôt passif, ",
-      "les  noirs se développent ",
-      "en sortant leur pion."
+      "Coup plutôt passif, les noirs ",
+      "se développent protégeant le",
+      "pion en c5."
     ],
     "pieceId": "blackPawnD",
-    "idExplanation": "explanation04"
+    "idExplanation": "explanation4"
   },
   {
     "nom": "d4",
     "x": 0,
     "y": -129,
-    "texte": ["d4 prend le centre", "et attaque le pion c5", "des noirs."],
+    "texte": ["D4 prend le centre et attaque", " le pion c5 des noirs."],
     "pieceId": "whitePawnD",
-    "idExplanation": "explanation05"
+    "idExplanation": "explanation5"
   },
   {
     "nom": "cxd4",
     "x": 64,
     "y": 64,
-    "texte": [
-      "Les noirs acceptent",
-      "l'échange en prenant d4",
-      "en diagonale."
-    ],
+    "texte": ["Les noirs acceptent l'échange", " en prenant d4 en diagonale."],
     "pieceId": "blackPawnC",
-    "idExplanation": "explanation06",
+    "idExplanation": "explanation6",
     "hide": "whitePawnD"
   },
   {
@@ -86,7 +86,7 @@
       "cavalier."
     ],
     "pieceId": "whiteKnightR",
-    "idExplanation": "explanation07",
+    "idExplanation": "explanation7",
     "hide": "blackPawnC"
   },
   {
@@ -95,11 +95,11 @@
     "y": 128,
     "texte": [
       "Les noirs développent leur",
-      "cavalier et attaquent le",
-      "pion en e4"
+      "cavalier et attaquent le pion",
+      "en e4."
     ],
     "pieceId": "blackKnightR",
-    "idExplanation": "explanation08"
+    "idExplanation": "explanation8"
   },
   {
     "nom": "Cc3",
@@ -107,16 +107,21 @@
     "y": -128,
     "texte": [
       "Coup logique de développement",
-      "les blancs sortent leur cavalier"
+      "les blancs sortent leur cavalier",
+      "pour protéger leur pion en e4."
     ],
     "pieceId": "whiteKnightL",
-    "idExplanation": "explanation09"
+    "idExplanation": "explanation9"
   },
   {
     "nom": "a6",
     "x": 0,
     "y": 65.5,
-    "texte": ["a6 permet d'éviter que", "le fou blanc vienne", "en b5"],
+    "texte": [
+      "A6 est un coup tactique",
+      "intéressant, il empêche le fou",
+      "blanc de venir en b5."
+    ],
     "pieceId": "blackPawnA",
     "idExplanation": "explanation10"
   },
@@ -124,7 +129,11 @@
     "nom": "Fe3",
     "x": 128,
     "y": -128,
-    "texte": ["Coup de développement", "les blancs sortent leur fou"],
+    "texte": [
+      "Coup de développement,",
+      "les blancs sortent leur fou",
+      "protégeant le cavalier en d4."
+    ],
     "pieceId": "whiteBishopL",
     "idExplanation": "explanation11"
   },
@@ -132,7 +141,7 @@
     "nom": "e5",
     "x": 0,
     "y": 128,
-    "texte": ["Attaque du cavalier en", "e5 qui pousse les blancs", "à agir"],
+    "texte": ["Attaque du cavalier en e5", "qui pousse les blancs à agir."],
     "pieceId": "blackPawnE",
     "idExplanation": "explanation12"
   },
@@ -140,7 +149,7 @@
     "nom": "Cb3",
     "x": -128,
     "y": 64,
-    "texte": ["Le cavalier se retire", "pour aller se protéger", "en b3"],
+    "texte": ["Le cavalier se retire pour", "aller se protéger en b3."],
     "pieceId": "whiteKnightR",
     "idExplanation": "explanation13"
   },
@@ -151,7 +160,7 @@
     "texte": [
       "Les  noirs se développent ",
       "en sortant leur fou et ",
-      "contrôle le centre"
+      "contrôlent le centre."
     ],
     "pieceId": "blackBishopL",
     "idExplanation": "explanation14"
@@ -160,7 +169,7 @@
     "nom": "f3",
     "x": 0,
     "y": -64,
-    "texte": ["Ce coup de pion", "sert à protéger", "le pion en e4"],
+    "texte": ["Ce coup de pion sert à", "protéger le pion en e4."],
     "pieceId": "whitePawnF",
     "idExplanation": "explanation15"
   },
@@ -169,9 +178,9 @@
     "x": -64,
     "y": 64,
     "texte": [
-      "Les  noirs se développent ",
-      "en sortant leur fou et ",
-      "contrôle le centre"
+      "Les  noirs se développent en ",
+      "sortant leur fou et contrôle",
+      "le centre."
     ],
     "pieceId": "blackBishopR",
     "idExplanation": "explanation16"

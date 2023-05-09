@@ -1,4 +1,4 @@
-import { select, selectAll } from "d3-selection";
+import { select } from "d3-selection";
 
 const board = select("#board").append("g");
 const fontMove = "Segoe UI";
@@ -802,7 +802,7 @@ comments
   .attr("fill", textColor);
 comments
   .append("text")
-  .text("sicilienne, veuillez faire !")
+  .text("sicilienne, veuillez faire")
   .attr("id", "ligne2")
   .attr("x", 15)
   .attr("y", 40)
@@ -812,7 +812,7 @@ comments
   .attr("fill", textColor);
 comments
   .append("text")
-  .text("défiler pour voir la suite.")
+  .text("défiler pour voir la suite!")
   .attr("id", "ligne3")
   .attr("x", 15)
   .attr("y", 60)
@@ -841,6 +841,7 @@ const changeFont = (nom) => {
 };
 const boardExplanation = (idExplanation) => {
   if (idExplanation.length == 12) {
+    console.log(idExplanation);
     let explanation = "#" + idExplanation;
     let lastChar = explanation.slice(-1);
     let newNumber = parseInt(lastChar) - 1;
@@ -944,7 +945,105 @@ board
   .attr("stroke", "red")
   .attr("stroke-width", 3)
   .style("display", "none");
-
+board
+  .append("rect")
+  .attr("id", "explanation3")
+  .attr("x", 64 * 3)
+  .attr("y", 64 * 4)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation4")
+  .attr("x", 64 * 2)
+  .attr("y", 64 * 3)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation5")
+  .attr("x", 64 * 2)
+  .attr("y", 64 * 3)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation6")
+  .attr("x", 64 * 3)
+  .attr("y", 64 * 4)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation7")
+  .attr("x", 64 * 3)
+  .attr("y", 64 * 4)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation8")
+  .attr("x", 64 * 4)
+  .attr("y", 64 * 4)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation9")
+  .attr("x", 64 * 4)
+  .attr("y", 64 * 4)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation10")
+  .attr("x", 64 * 1)
+  .attr("y", 64 * 3)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation11")
+  .attr("x", 64 * 3)
+  .attr("y", 64 * 4)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
 board
   .append("rect")
   .attr("id", "explanation12")
@@ -1097,15 +1196,17 @@ fetch("./data.json")
             .attr("x", currentPositionX - 192)
             .attr("y", currentPositionY + 0);
         }
-        moveback(
-          data[indexmax - 1].nom,
-          data[indexmax].x,
-          data[indexmax].y,
-          data[indexmax].pieceId,
-          data[indexmax - 1].texte,
-          data[indexmax].idExplanation,
-          data[indexmax].hide
-        );
+        if (indexmax >= 0) {
+          moveback(
+            data[indexmax - 1].nom,
+            data[indexmax].x,
+            data[indexmax].y,
+            data[indexmax].pieceId,
+            data[indexmax - 1].texte,
+            data[indexmax].idExplanation,
+            data[indexmax].hide
+          );
+        }
         indexmax = indexmax - 1;
       }
       //vers le bas
@@ -1132,30 +1233,20 @@ fetch("./data.json")
             .attr("x", currentPositionX + 192)
             .attr("y", currentPositionY + 0);
         }
-        move(
-          data[indexmax].nom,
-          data[indexmax].x,
-          data[indexmax].y,
-          data[indexmax].pieceId,
-          data[indexmax].texte,
-          data[indexmax].idExplanation,
-          data[indexmax].hide
-        );
+        if (indexmax >= 0) {
+          move(
+            data[indexmax].nom,
+            data[indexmax].x,
+            data[indexmax].y,
+            data[indexmax].pieceId,
+            data[indexmax].texte,
+            data[indexmax].idExplanation,
+            data[indexmax].hide
+          );
+        }
 
         console.log("La molette va vers le bas");
       }
     });
   })
   .catch((error) => console.error(error));
-// Définir la taille de chaque carré
-const squareSize = 10;
-
-// Définir une palette de couleurs
-const colorPalette = [
-  "#ff00ff",
-  "#00ffff",
-  "#ffff00",
-  "#00ff00",
-  "#ff0000",
-  "#0000ff",
-];
