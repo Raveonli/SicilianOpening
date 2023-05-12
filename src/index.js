@@ -885,8 +885,9 @@ const move = (nom, x, y, pieceId, text, idExplanation, hide) => {
   let currentPositionY = parseFloat(pieceSelected.attr("y"));
   //console.log(currentPositionX, currentPositionY);
   pieceSelected
-    .transition()
-    .delay(300)
+    //en cas de transition,decommenter les 2 lignes suivantes
+    // .transition()
+    // .duration(100)
     .attr("x", currentPositionX + x)
     .attr("y", currentPositionY + y);
   // setTimeout(function () {
@@ -906,7 +907,11 @@ const moveback = (nom, x, y, pieceId, text, idExplanation, hide) => {
   let currentPositionX = parseFloat(pieceSelected.attr("x"));
   let currentPositionY = parseFloat(pieceSelected.attr("y"));
   //console.log(currentPositionX, currentPositionY);
-  pieceSelected.attr("x", currentPositionX - x).attr("y", currentPositionY - y);
+  pieceSelected
+    // .transition()
+    // .duration(100)
+    .attr("x", currentPositionX - x)
+    .attr("y", currentPositionY - y);
   changeTexte(text);
   changeFont(nom);
   boardExplanationback(idExplanation);
@@ -1064,6 +1069,116 @@ board
   .style("display", "none");
 board
   .append("rect")
+  .attr("id", "explanation13")
+  .attr("x", 64 * 1)
+  .attr("y", 64 * 5)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation14")
+  .attr("x", 64 * 3)
+  .attr("y", 64 * 3)
+  .attr("width", 128)
+  .attr("height", 128)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation15")
+  .attr("x", 64 * 4)
+  .attr("y", 64 * 4)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation16")
+  .attr("x", 64 * 4)
+  .attr("y", 64 * 1)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation17")
+  .attr("x", 64 * 3)
+  .attr("y", 64 * 6)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation18")
+  .attr("x", 64 * 4)
+  .attr("y", 0)
+  .attr("width", 64 * 4)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation19")
+  .attr("x", 0)
+  .attr("y", 64 * 7)
+  .attr("width", 64 * 5)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation20")
+  .attr("x", 64 * 3)
+  .attr("y", 64)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation21")
+  .attr("x", 64 * 5)
+  .attr("y", 0)
+  .attr("width", 64 * 3)
+  .attr("height", 64 * 2)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation22")
+  .attr("x", 64 * 2)
+  .attr("y", 64 * 7)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
   .attr("id", "explanation23")
   .attr("x", 64 * 5)
   .attr("y", 64 * 2)
@@ -1073,6 +1188,73 @@ board
   .attr("stroke", "red")
   .attr("stroke-width", 3)
   .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation24")
+  .attr("x", 64 * 2)
+  .attr("y", 64 * 5)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation25")
+  .attr("x", 64 * 2)
+  .attr("y", 64 * 5)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation26")
+  .attr("x", 64 * 4)
+  .attr("y", 64 * 0)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation27")
+  .attr("x", 64 * 5)
+  .attr("y", 64 * 4)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation28")
+  .attr("x", 64)
+  .attr("y", 64 * 6)
+  .attr("width", 64 * 3)
+  .attr("height", 64 * 2)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+board
+  .append("rect")
+  .attr("id", "explanation29")
+  .attr("x", 64 * 4)
+  .attr("y", 64 * 2)
+  .attr("width", 64)
+  .attr("height", 64)
+  .attr("fill", "none")
+  .attr("stroke", "red")
+  .attr("stroke-width", 3)
+  .style("display", "none");
+
 //move("e4", 0, -129, "whitePawnE", texte, "explanation1");
 // move("c5", 0, 129, "blackPawnC", texte1, "explanation2");
 function getIndexByTextId(textId, data) {

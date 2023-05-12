@@ -177,11 +177,7 @@
     "nom": "Fe7",
     "x": -64,
     "y": 64,
-    "texte": [
-      "Les  noirs se développent en ",
-      "sortant leur fou et contrôle",
-      "le centre."
-    ],
+    "texte": ["Les  noirs se développent en ", "sortant leur second fou."],
     "pieceId": "blackBishopR",
     "idExplanation": "explanation16"
   },
@@ -197,7 +193,11 @@
     "nom": "o-o",
     "x": 128,
     "y": 0,
-    "texte": ["Coup spécial qui permet", "d'échanger le roi et la tour."],
+    "texte": [
+      "Le roque est un coup spécial ",
+      "qui permet d'échanger le roi et ",
+      "la tour en une seule fois."
+    ],
     "pieceId": "blackKing",
     "idExplanation": "explanation18"
   },
@@ -205,7 +205,11 @@
     "nom": "o-o-o",
     "x": -128,
     "y": 0,
-    "texte": ["Pareillement, les blancs", "mettent à l'abris leur roi."],
+    "texte": [
+      "Pareillement, les blancs",
+      "mettent à l'abris leur roi en",
+      "faisant le grand roque."
+    ],
     "pieceId": "whiteKing",
     "idExplanation": "explanation19"
   },
@@ -320,10 +324,10 @@
     "texte": [
       "Les blancs poussent leur ",
       "pion pour chasser le fou",
-      "des noirs."
+      "des noirs en e6."
     ],
     "pieceId": "whitePawnF",
-    "idExplanation": "explanation27"
+    "idExplanation": "explanation29"
   },
   {
     "nom": "a4",
@@ -335,6 +339,6 @@
       "une attaque arrive des 2 côtés."
     ],
     "pieceId": "blackPawnA",
-    "idExplanation": "explanation28"
+    "idExplanation": "explanation30"
   }
 ]
