@@ -841,7 +841,7 @@ const changeFont = (nom) => {
 };
 const boardExplanation = (idExplanation) => {
   if (idExplanation.length == 12) {
-    console.log(idExplanation);
+    //console.log(idExplanation);
     let explanation = "#" + idExplanation;
     let lastChar = explanation.slice(-1);
     let newNumber = parseInt(lastChar) - 1;
@@ -885,8 +885,8 @@ const move = (nom, x, y, pieceId, text, idExplanation, hide) => {
   let currentPositionY = parseFloat(pieceSelected.attr("y"));
   //console.log(currentPositionX, currentPositionY);
   pieceSelected
-    // .transition()
-    // .delay(300)
+    .transition()
+    .delay(300)
     .attr("x", currentPositionX + x)
     .attr("y", currentPositionY + y);
   // setTimeout(function () {
@@ -898,7 +898,7 @@ const move = (nom, x, y, pieceId, text, idExplanation, hide) => {
   }
   // }, 500);
 
-  console.log(pieceSelected);
+  //console.log(pieceSelected);
 };
 
 const moveback = (nom, x, y, pieceId, text, idExplanation, hide) => {
@@ -1094,16 +1094,16 @@ fetch("./data.json")
         let id = this.id; // Récupère l'ID de l'élément cliqué
         let index = indexmax + 1;
         let valeurDepart = indexmax;
-        console.log(index);
+        //console.log(index);
         indexmax = getIndexByTextId(id, data);
-        console.log("L'élément avec l'ID " + indexmax + " a été cliqué !");
+        //console.log("L'élément avec l'ID " + indexmax + " a été cliqué !");
 
         if (indexmax < valeurDepart) {
           index--;
           for (index; index > indexmax; index--) {
             removefont(data[index].nom);
-            console.log(index);
-            console.log(indexmax);
+            //console.log(index);
+            //console.log(indexmax);
             //castle black coup spécial
             if (index == 18) {
               let pieceSelected = select("#blackRookR");
@@ -1134,7 +1134,7 @@ fetch("./data.json")
             );
           }
         } else if (valeurDepart == index) {
-          console.log("on est égalité");
+          //console.log("on est égalité");
         } else {
           for (index; index <= indexmax; index++) {
             if (index == 0) {
@@ -1220,7 +1220,7 @@ fetch("./data.json")
       else if (e.deltaY > 0) {
         removeUnderline(data[indexmax].nom);
         indexmax = indexmax + 1;
-        console.log(indexmax);
+        //console.log(indexmax);
 
         if (indexmax == 18) {
           let pieceSelected = select("#blackRookR");
@@ -1252,7 +1252,7 @@ fetch("./data.json")
           );
         }
 
-        console.log("La molette va vers le bas");
+        //console.log("La molette va vers le bas");
       }
     });
   })
