@@ -275,7 +275,7 @@ board
   .attr("y", 65);
 board
   .append("image")
-  .attr("id", "blackPawnG")
+  .attr("id", "blackPawnH")
   .attr("href", "./img/blackPawn.svg")
   .attr("width", 59)
   .attr("x", positionH)
@@ -802,7 +802,7 @@ comments
   .attr("fill", textColor);
 comments
   .append("text")
-  .text("sicilienne, veuillez faire")
+  .text("sicilienne. Vous pouvez faire")
   .attr("id", "ligne2")
   .attr("x", 15)
   .attr("y", 40)
@@ -812,7 +812,7 @@ comments
   .attr("fill", textColor);
 comments
   .append("text")
-  .text("défiler pour voir la suite!")
+  .text("défiler pour voir la suite !")
   .attr("id", "ligne3")
   .attr("x", 15)
   .attr("y", 60)
@@ -880,22 +880,29 @@ const boardExplanationback = (idExplanation) => {
   }
 };
 const move = (nom, x, y, pieceId, text, idExplanation, hide) => {
-  let pieceSelected = select("#" + pieceId);
+  let pieceSelected = d3.select("#" + pieceId);
   let currentPositionX = parseFloat(pieceSelected.attr("x"));
   let currentPositionY = parseFloat(pieceSelected.attr("y"));
   //console.log(currentPositionX, currentPositionY);
-  pieceSelected.attr("x", currentPositionX + x).attr("y", currentPositionY + y);
-
+  pieceSelected
+    // .transition()
+    // .delay(300)
+    .attr("x", currentPositionX + x)
+    .attr("y", currentPositionY + y);
+  // setTimeout(function () {
   changeTexte(text);
   changeFont(nom);
   boardExplanation(idExplanation);
   if (hide) {
     select("#" + hide).style("display", "none");
   }
+  // }, 500);
+
+  console.log(pieceSelected);
 };
 
 const moveback = (nom, x, y, pieceId, text, idExplanation, hide) => {
-  let pieceSelected = select("#" + pieceId);
+  let pieceSelected = d3.select("#" + pieceId);
   let currentPositionX = parseFloat(pieceSelected.attr("x"));
   let currentPositionY = parseFloat(pieceSelected.attr("y"));
   //console.log(currentPositionX, currentPositionY);
